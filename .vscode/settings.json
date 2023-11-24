@@ -1,0 +1,18 @@
+{
+  "editor.hover.enabled": false,
+  "editor.parameterHints.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"],
+  "eslint.format.enable": true,
+  "cSpell.words": [
+    "btns",
+    "Hmmss",
+    "Inktrap",
+    "tailwindcss",
+    "Whyte",
+    "YYYYMMDDTH"
+  ]
+}

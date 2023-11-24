@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: ABC Whyte;
+    src: url(/fonts/ABCWhyte-Regular.woff2) format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: ABC Whyte;
+    src: url(/fonts/ABCWhyte-Bold.woff2) format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: ABC Whyte Inktrap;
+    src: url(/fonts/ABCWhyteInktrap-Bold.woff2) format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: ABC Whyte Inktrap;
+    src: url(/fonts/ABCWhyteInktrap-Regular.woff2) format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: ABC Whyte Mono;
+    src: url(/fonts/ABCWhyteMono-Regular.woff2) format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+
+  html {
+    font-size: 16px; /* base font size */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @media (min-width: 1440px) {
+    html {
+      font-size: max(16px, 1.111vw);
+    }
+  }
+  @media (min-width: 1600px) {
+    html {
+      font-size: 17.776px;
+    }
+  }
+
+  body {
+    scrollbar-gutter: stable both-edges;
+    overflow-y: scroll;
+  }
+
+  body.loading, body.loading * {
+    cursor: wait;
+  }
+
+  ::selection {
+    background: #ffdfdd;
+  }
+  ,
+  ::-moz-selection {
+    background: #ffdfdd;
+  }
+
+  .slider {
+  }
+  .slider > * {
+    flex-shrink: 0;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #EEE;
+  }
+  .transparent-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
+
+  .small-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  img.lazyloaded {
+    opacity: 1;
+  }
+
+  .menu-fade-up {
+    transform: translateY(10px)
+  }
+}
+
+@layer components {
+  .gradients-mobile-filters-container {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      #ffffff 70%
+    );
+  }
+
+  .gradients-call-to-action {
+    background: linear-gradient(45deg, #e77fbe 0%, #ffd876 100%);
+  }
+
+  .bottom-line {
+    @apply after:absolute after:bottom-0 after:left-0 after:right-0 after:opacity-50 after:bg-current after:h-[1px]
+  }
+
+  .top-line {
+    @apply before:absolute before:top-0 before:left-0 before:right-0 before:opacity-50 before:bg-current before:h-[1px]
+  }
+
+  .responsive_ad_1 { width: 320px; height: 100px; }
+  @media(min-width: 500px) { .responsive_ad_1 { width: 468px; height: 60px; } }
+  @media(min-width: 800px) { .responsive_ad_1 { width: 728px; height: 90px; } }
+
+  .not-prose a {
+    text-decoration: underline
+  }
+  .not-prose a:hover {
+    text-decoration: none
+  }
+  .section-title-update {
+    & strong {
+      font-weight: normal
+    }
+  }
+}
